@@ -1,0 +1,20 @@
+# Raw run records: ~1.5 GB of trajectories, strace logs and per-run analysis.
+# Everything the report cites is derived into results/ and notes/, which are tracked.
+# (artifact/.gitignore, shipped with the course harness, also ignores runs/.)
+artifact/runs/
+
+# The Overleaf project is its own git repository, cloned into this directory.
+# Push the report there, not here; committing it would leave a broken gitlink.
+6b02c2178bb37396597a9706/
+
+# Course lecture slides: not our work, so they stay out of a hosted repo.
+module/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# macOS / archive debris
+.DS_Store
+._*
+__MACOSX/

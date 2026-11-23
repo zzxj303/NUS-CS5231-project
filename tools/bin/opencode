@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# OpenCode wrapper placed first on PATH by tools/experiment.py.
+#
+# `opencode run` is traced with strace (observation layer L2) when PROV_STRACE_OUT is
+# set; every other subcommand (--version, export, debug, ...) passes through unchanged,
+# so scripts/collect.py needs no modification.
+#
+# Only syscalls that create processes, change directory, connect, or move data between a
+# process and a path are traced. stat/access calls are left out: they do not move data
+# and dominate the log. -y prints the path behind every fd argument (e.g. openat dirfd).
+set -euo pipefail
+
+real="${OPENCODE_REAL:-$HOME/.opencode/bin/opencode}"
+syscalls="%process,chdir,connect,open,openat,openat2,creat,rename,renameat,renameat2"
+syscalls+=",unlink,unlinkat,mkdir,mkdirat,rmdir,truncate,link,linkat,symlink,symlinkat"
+
+if [[ "${1:-}" == "run" && -n "${PROV_STRACE_OUT:-}" ]]; then
+    exec strace --seccomp-bpf -f -ttt -qq -y -s 4096 -e trace="$syscalls" \
+        -o "$PROV_STRACE_OUT" "$real" "$@"
+fi
+exec "$real" "$@"

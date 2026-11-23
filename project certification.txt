@@ -1,0 +1,39 @@
+Project Clarification
+Hi all, 
+
+The course project follows the same high-level education principle we had in the previous two modules. It is concept and design-oriented, light in implementation, which fits the new structure of our lecture of this semester. Here is a summary and clarification of what we have disccuss in last week's lecture. 
+
+Your goal is to apply concepts and security thinking from Module 1 or Module 2 to a new problem. You can use the problem you chose or the LLM agent skill problem we have released as a reference. The focus is to think about how a new security problem can be understood in terms of problems and techniques we have already studied.
+
+Planned schedule
+Weeks 11–12: Problem definition and analysis
+Weeks 12–13: Solution design and description
+One additional week: Implementation
+Grading
+Problem statement and analysis: 10 marks
+Technical design: 10 marks
+Implementation: 5 marks
+Individual report: 5 marks
+Most marks are allocated for analysis and design, not implementation. A simple proof-of-concept implementation is acceptable, and you can use AI tools, there are tools and AI tokens available through NUS and SoC. 
+
+Reports and submission
+Your group project report needs to include the following components:
+
+As the Section 1, include a 1–2 page executive summary covering the problem, its connection to Module 1 or 2, your technical design, the extensions needed, and preliminary evidence supporting your idea. This part is intended to be the raw communication from the team.
+
+Specifically, you need to answer these questions in short and concise sentences:
+
+Problem statement and analysis.
+
+What is the problem statement?
+How is it similar a problem to one we have learned in Module 1 or Module 2?
+Technical design
+
+How do you design the solution based on ideas we have learned in Module 1 or Module 2?
+What is the difference and the extension you need to make to address the new problem?
+Section 2 and onwards is a technical report with an introduction, background, problem definition, technical design, evaluation, and conclusion. AI help is allowed for this part.
+
+Submit one group project report in the Teams folder, with your implementation as supporting material, describing which part of implementation is AI generated. Each team member also need to submit a one-page individual report into the team’s folder, describing the individual contribution to the project (such as the analysis done, ideas tried, part implemented).
+
+
+
